@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_gravity="center"
+        android:id="@+id/cardView"
+        style="@style/MyCardViewStyle">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/imageOfRecipe"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/titleOfRecipe"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    style="@style/MainText"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:layout_marginTop="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/rankIcon"
+                        android:background="@mipmap/rank_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="start"
+                        android:id="@+id/rank" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="95dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/showPreparation"
+                    android:textSize="12sp"
+                    android:textColor="@color/background"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/search_button"
+                    android:text="@string/preparation"/>
+                <!--android:text="1/4 cup cooked shredded chicken, warm', '1 tablespoon hot sauce', '1/2 tablespoon mayo (optional)', '1 tablespoon carrot, grated', '1 tablespoon celery, sliced', '1 tablespoon green or red onion, sliced or diced', '1 tablespoon blue cheese, room temperature, crumbled', '1/2 cup cheddar cheese, room temperature, grated', '2 slices bread', '1 tablespoon butter, room temperature\n'"-->
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/igredButton"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/background"
+                    android:text="@string/showIngredients"
+                    android:background="@drawable/search_button"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ingredView"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

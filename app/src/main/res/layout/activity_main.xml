@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+    android:background="@color/background">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:background="@color/secondaryBackground"
+        android:gravity="center_horizontal" >
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingredientsEdit"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:hint="@string/ingredients"
+            android:maxLines="1" />
+
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="28dp"
+            android:id="@+id/searchButton"
+            android:layout_toRightOf="@id/ingredientsEdit"
+            android:layout_toEndOf="@id/ingredientsEdit"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/search_button"
+            android:textColor="@color/background"
+            android:background="@drawable/search_button"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/fragmentList"
+        android:name="com.java.recipesfinder2.fragments.ListFragment"
+        tools:layout="@layout/fragment_layout">
+
+    </fragment>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/previousButton"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:text="@string/previous"
+            android:background="@color/secondaryBackground"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+        <TextView
+            android:layout_width="43dp"
+            android:layout_height="match_parent"
+            android:id="@+id/pageView"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nextButton"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:text="@string/next"
+            android:background="@color/secondaryBackground"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

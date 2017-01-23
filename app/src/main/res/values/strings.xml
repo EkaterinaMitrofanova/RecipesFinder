@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecipesFinder</string>
+    <string name="preparation">Preparation</string>
+    <string name="showIngredients">Show ingredients</string>
+    <string name="action_settings">Settings</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="search_button">Search</string>
+    <string name="previous"><![CDATA[<< previous]]></string>
+    <string name="next"><![CDATA[next >>]]></string>
+</resources>
