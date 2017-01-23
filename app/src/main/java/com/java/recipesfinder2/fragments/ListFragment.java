@@ -45,12 +45,6 @@ public class ListFragment extends Fragment{
             adapter = new RecyclerAdapter();
         }
         recyclerView.setAdapter(adapter);
-    }
-
-    public void setPosition(){
-        position = linearLayoutManager.findFirstVisibleItemPosition();
-    }
-    public void scrollToPosition(){
         if (position != 0) {
             linearLayoutManager.scrollToPosition(position);
         }
@@ -64,6 +58,9 @@ public class ListFragment extends Fragment{
         adapter.notifyItemChanged(Integer.valueOf(position));
     }
 
-
-
+    @Override
+    public void onDetach() {
+        position = linearLayoutManager.findFirstVisibleItemPosition();
+        super.onDetach();
+    }
 }

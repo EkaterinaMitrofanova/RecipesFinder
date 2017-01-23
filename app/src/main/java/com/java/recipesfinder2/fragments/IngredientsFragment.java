@@ -82,11 +82,11 @@ public class IngredientsFragment extends Fragment{
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
             if (values[0].equals("server")){
-                Toast.makeText(activity, "Server error. Please, try again later", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Server error. Please try again later", Toast.LENGTH_SHORT).show();
             } else if (values[0].equals("internet")){
-                Toast.makeText(activity, "Please, check Internet connection", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Please check Internet connection", Toast.LENGTH_SHORT).show();
             }
-            onCancelled();
+            cancel(true);
         }
 
 

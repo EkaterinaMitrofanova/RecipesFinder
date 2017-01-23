@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentManager = getSupportFragmentManager();
 
         listFragment = (ListFragment) fragmentManager.findFragmentById(R.id.fragmentList);
-        listFragment.scrollToPosition();
 
         searchFragment = (SearchFragment) fragmentManager.findFragmentByTag(SEARCH_TAG);
         if (searchFragment == null){
@@ -150,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 pageView.setText(String.valueOf(page));
             } else {
                 System.out.println(searchRecipes.getCount());
-                Toast.makeText(this, "Please, check ingredients", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please check ingredients", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -196,7 +195,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onDestroy() {
-        listFragment.setPosition();
         super.onDestroy();
         try {
             trimCache(this);
